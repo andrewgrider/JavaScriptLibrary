@@ -1,7 +1,7 @@
 class Library {
-  constructor(){
+  constructor(elem){
     this.helper = {
-      elem : null,
+      "elem" : elem ? elem : null,
       
     };
   }
@@ -9,6 +9,4 @@ class Library {
     return new Date.now();
   }
 }
-(function(){
-  window.$ = new Library();
-})()
+window.$ = new Library();
